@@ -1,0 +1,663 @@
+/* src/styles/Overview.css */
+
+/* ===== 기본 컨테이너 ===== */
+.overview-container {
+  font-family: 'Pretendard', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 50px;
+}
+
+/* ===== 프로필 사진 + 텍스트 ===== */
+.intro-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  /* 좁은 화면일 때 자동 줄바꿈 */
+  margin-bottom: 50px;
+}
+
+/* 왼쪽 사진 */
+.intro-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* 오른쪽 텍스트 */
+.intro-wrapper .overview-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+/* ===== 공통 텍스트 ===== */
+.overview-text {
+  max-width: 1000px;
+  color: #17153B;
+  text-align: center;
+}
+
+/* ===== 헤딩 스타일 ===== */
+.overview-text h1 {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #5035ff;
+}
+
+.overview-text h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.overview-text h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.overview-text h2,
+.overview-text h3 {
+  color: #836FFF;
+}
+
+/* ===== 본문 텍스트 ===== */
+.overview-text p {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+/* ===== 자기소개 섹션 ===== */
+.intro-subtext {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #222;
+  margin-top: 12px;
+  margin-bottom: 30px;
+}
+
+/* ===== 이력서 다운로드 버튼 ===== */
+.resume-btn {
+  display: inline-block;
+  background-color: rgb(34, 34, 34, 0.05);
+  color: rgb(34, 34, 34, 0.65);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.resume-btn:hover {
+  background-color: rgb(34, 34, 34, 0.35);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* ===== 자기소개 카드 ===== */
+.intro-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+
+.intro-card {
+  flex: 1 1 280px;
+  max-width: 200px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 18px;
+  padding: 30px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.intro-card h3 {
+  color: #333;
+  background-color: rgba(174, 234, 148, 0.25);
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0px 0px;
+  display: inline-block;
+}
+
+.intro-card p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 0;
+}
+
+/* ===== 전체 섹션 ===== */
+.section.study-section {
+  padding: 30px;
+  background-color: #ffffff;
+  color: #1f2937;
+  /* gray-800 */
+}
+
+/* ===== 제목 및 설명 ===== */
+.study-section .overview-text {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ===== 카테고리 영역 ===== */
+.study-category {
+  margin-bottom: 3rem;
+}
+
+.study-category h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  /* gray-900 */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== 각 항목 ===== */
+.study-item {
+  margin-bottom: 1.5rem;
+  /* padding-left: 1rem; */
+}
+
+/* ===== 기간 ===== */
+.study-item .period {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0px;
+}
+
+/* ===== 학교명 / 시험명 ===== */
+.study-item .title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+/* ===== 전공 / 점수 / 레벨 ===== */
+.study-item .major,
+.study-item .level,
+.study-item .score {
+  color: #505050;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+/* ===== 세부 내용 리스트 ===== */
+.study-item ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin-top: 10px;
+  color: #6f6f6f;
+}
+
+.study-item ul li {
+  line-height: 1.4;
+  font-size: 13px;
+  margin-bottom: 0.25rem;
+}
+
+/* ===== 프로젝트 카드 레이아웃 ===== */
+
+.project-section .overview-text {
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  column-gap: 0px;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0px;
+  padding: 0;
+}
+
+/* ===== 카드 스타일 ===== */
+.project-card {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  justify-content: flex-start;
+  height: 90%; /* 카드 높이 일정하게 */
+
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  width: 80%;
+  max-width: 300px;
+  /* 카드 최대 너비 제한 */
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.project-title {
+  font-weight: 550;
+  font-size: 15px;
+  text-align: justify;
+  margin-bottom: 5px;
+}
+
+.project-period {
+  font-size: 13px;
+  font-weight: 400;
+  color: #888888;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.project-type {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6c57fa;
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.project-summary {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4c4c4c;
+  margin-top: 0px;
+}
+
+/* ===== 모달 스타일 ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  opacity: 0;                /* 처음에는 투명 */
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;      /* 클릭 불가능 상태 */
+}
+
+.modal-overlay.active {
+  opacity: 1;                /* 보이게 */
+  pointer-events: auto;      /* 클릭 가능 */
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 40px 40px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-overlay.active .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.modal-content h4 {
+  font-size: 1rem;
+  margin-top: 16px;
+  margin-bottom: 2px;
+  color: #6c57fa;
+  font-weight: 600;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+  line-height: 1.8;
+  color: #3d3d3d;
+}
+
+.close-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #686868;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #383838;
+}
+
+/* ====== 모달 내부 아이콘 ====== */
+.modal-tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  margin: 10px 0 20px;
+  align-items: center;
+}
+
+/* 아이콘 + 툴팁 래퍼 */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-wrapper img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.tooltip-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== 툴팁 ===== */
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 120%; /* 아이콘 위로 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 6px;
+  padding: 5px 8px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+/* hover 시 표시 */
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* ====== 기술(Tech) 섹션 전체 ====== */
+.tech-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* ====== 언어 숙련도 + 프레임워크/툴 전체 래퍼 ====== */
+.tech-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ====== 개별 블록 (왼쪽 언어, 오른쪽 프레임워크) ====== */
+.tech-box {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.tech-box h2 {
+  font-size: 19px;
+  font-weight: 550;
+  margin-bottom: 30px;
+}
+
+/* ====== 프레임워크 카테고리 ====== */
+.framework-category {
+  border-left: 3px solid #ddd;
+  padding-left: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.framework-category h3 {
+  font-size: 17px;
+  font-weight: 550;
+  margin-bottom: 0.6rem;
+  color: #222;
+}
+
+/* ====== 숙련도 구간 ====== */
+.tech-level {
+  border-left: 3px solid #ddd;
+  padding-left: 1.2rem;
+  transition: border-color 0.2s ease;
+  margin-bottom: 35px;
+}
+
+/* ====== 숙련도 제목 (입문/초급/중급) ====== */
+.level-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.level-header h3 {
+  font-size: 17px;
+  font-weight: 550;
+  margin: 0px;
+}
+
+/* ====== 색상 원 (빨강/노랑/초록) ====== */
+.level-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.level-dot.beginner {
+  background-color: #e74c3c;
+  /* 빨강 */
+}
+
+.level-dot.intermediate {
+  background-color: #f1c40f;
+  /* 노랑 */
+}
+
+.level-dot.advanced {
+  background-color: #2ecc71;
+  /* 초록 */
+}
+
+/* ====== 숙련도 설명 ====== */
+.description {
+  font-size: 14px;
+  font-weight: 350;
+  color: #666;
+  margin: 10px 0px;
+}
+
+/* ====== 아이콘 리스트 ====== */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  /* 화면 좁을 때 다음 줄로 감기게 */
+  gap: 1rem 1.5rem;
+  align-items: center;
+}
+
+/* ====== 개별 아이콘 ====== */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  /* 각 아이콘 영역 너비 */
+  text-align: center;
+}
+
+.tech-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.tech-item img:hover {
+  transform: scale(1.1);
+}
+
+.tech-item span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+}
+
+
+/* ===== 반응형 ===== */
+
+@media (max-width: 1024px) {
+
+  .intro-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card {
+    max-width: 400px;
+    width: 85%;
+  }
+
+  .tech-wrapper {
+    gap: 3rem;
+  }
+
+  .tech-box {
+    flex: 1 1 48%;
+  }
+
+  .framework-category h3 {
+    text-align: left;
+  }
+
+  .tech-icons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    zoom: 0.9; /* 전체를 90%비율로 축소 */
+  }
+
+  .overview-container {
+    margin: 80px 20px;
+  }
+
+  .overview-text h1 {
+    font-size: 22px;
+  }
+
+  .intro-card-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .intro-card {
+    width: 80%;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .intro-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .intro-wrapper .overview-text {
+    text-align: center;
+  }
+
+  .intro-photo img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-wrapper {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .tech-box {
+    flex: 1 1 100%;
+  }
+
+  .modal-overlay {
+  zoom: 0.9;
+  padding: 25px;
+}
+
+.modal-content {
+  /* max-width: 500px; */
+  max-height: 650px;
+}
+
+}
