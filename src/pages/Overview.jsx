@@ -60,7 +60,7 @@ const Overview = () => {
             </p>
 
             {/* 이력서 다운로드 버튼 */}
-            <a href="/resume.pdf" download className="resume-btn">
+            <a href="/김소정_이력서.pdf" download className="resume-btn">
               이력서 다운로드
             </a>
           </div>
